@@ -1,77 +1,188 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-}
-body{
-    font-size: 13px;
-    font-family: "Barlow Semi Condensed", sans-serif;
-}
-:root{
-    --Moderate-violet: hsl(263, 55%, 52%);
---Very-dark-grayish-blue: hsl(217, 19%, 35%);
---Very-dark-blackish-blue: hsl(219, 29%, 14%);
---White: hsl(0, 0%, 100%);
---Light-gray: hsl(0, 0%, 81%);
---Light-grayish-blue: hsl(210, 46%, 95%);
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-     margin: 20px;  
-}
-.cards{
-    position: relative;
-    padding: 20px;
-    background-color:var(--Moderate-violet) ;
-    border-radius: 10px;
-    color: var(--White);
-    box-shadow:0 5px 10px rgba(0, 0,0, 0.3) ;
-}
-.cards .quotes{
-position: absolute;
-right: 20px;
-top: 0;
-width: 90px;
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
 }
 
-.cards .image{
-    display: flex;
-    align-items: center;
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
 }
- .cards .image img{
- border-radius: 50%;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 20px;
+}
+
+.cards {
+  position: relative;
+  padding: 20px;
+  background-color: var(--Moderate-violet);
+  border-radius: 10px;
+  color: var(--White);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.cards .quotes {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 90px;
+}
+
+.cards .profile {
+  display: flex;
+  align-items: center;
+}
+
+.cards .profile img {
+  border-radius: 50%;
   margin-right: 10px;
 }
-.cards h4{
-    margin: 20px 0;
-    font-size: 18px;
-}
-.cards p{
-    font-size: 16px;
-    color: var(--White);
-    opacity: 70%;
-}
-.image small{
-    color: var(--White);
-    opacity: 50%;
+
+.cards h2 {
+  margin: 20px 0;
+  font-size: 18px;
 }
 
-.grayish-blue{
+.cards p {
+  font-size: 16px;
+  color: var(--White);
+  opacity: 70%;
+}
+
+.image small {
+  color: var(--White);
+  opacity: 50%;
+}
+
+.jonathan {
+  background-color: var(--Very-dark-grayish-blue);
+}
+
+.white {
+  background-color: var(--White);
+}
+
+.grey {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.cards .light-grey {
+  color: var(--Very-dark-blackish-blue);
+}
+
+.darkish-blue {
+  background-color: var(--Very-dark-blackish-blue);
+}
+
+/* Desktop Screen */
+@media screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    display: grid;
+    max-width: 1440px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 17px 12px;
+    width: 80%;
+  }
+
+  .cards {
+    text-align: left;
+    align-self: start;
+    padding: 20px 31px 31px;
+    box-shadow: 2px 2px 10px;
+  }
+
+  .daniel {
+    background-color: var(--Moderate-violet);
+    grid-column: 1/3;
+  }
+
+  .image-1 {
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  .image-2 {
+    border-radius: 50%;
+    border: 2px solid var(--Moderate-violet);
+  }
+  .image-3 {
+    border-radius: 50%;
+    border: 2px solid var(--Moderate-violet);
+  }
+  .image-4 {
+    border-radius: 50%;
+    border: 2px solid var(--Moderate-violet);
+  }
+  .image-5 {
+    border-radius: 50%;
+    border: 2px solid var(--Moderate-violet);
+  }
+
+  .jonathan {
     background-color: var(--Very-dark-grayish-blue);
+    grid-column: 3/4;
+    height: 99%;
+  }
+
+  .harmon h2 {
+    padding-right: 30px;
+  }
+
+  .harmon p {
+    color: var(--Very-dark-grayish-blue);
+  }
+
+  .harmon {
+    color: var(--Very-dark-grayish-blue);
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 2;
+    height: 97%;
+  }
+
+  .patrick {
+    background-color: var(--Very-dark-blackish-blue);
+<<<<<<< HEAD
 }
 
-.white{
- background-color: var(--White);
+@media screen and (min-width:1440px) {
+    
 }
-.grey{
+=======
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+
+  .kira {
     color: var(--Very-dark-grayish-blue);
+    background-color: white;
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+
+  .kira p {
+    color: var(--Very-dark-grayish-blue);
+  }
+  padding: 20px 31px 31px;
 }
-.cards .light-grey{
-    color:var(--Very-dark-blackish-blue);
-}
-.darkish-blue{
-    background-color: var(--Very-dark-blackish-blue);
-}
+>>>>>>> 960efd0a2ce37c7ae7c1cf0a1f94d8e4bb707b76
