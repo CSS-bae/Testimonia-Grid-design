@@ -75,3 +75,7 @@ width: 90px;
 .darkish-blue{
     background-color: var(--Very-dark-blackish-blue);
 }
+
+@media screen and (min-width:1440px) {
+    
+}
